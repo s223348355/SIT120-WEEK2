@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Web Design</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 100%;
+        }
+        .header, .footer {
+            background: #f0f0f0;
+            padding: 10px;
+            text-align: center;
+        }
+        .nav {
+            display: flex;
+            justify-content: space-around;
+        }
+        .main-content {
+            padding: 20px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        @media screen and (max-width: 600px) {
+            .header, .footer {
+                padding: 5px;
+            }
+            .main-content {
+                padding: 10px;
+            }
+            .nav {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="nav">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+            </div>
+        </div>
+        <div class="main-content">
+            <h1>Welcome</h1>
+            <p>Responsive design adapts to different screen sizes.</p>
+            <img src="https://images.unsplash.com/photo-1472457897821-70d3819a0e24?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c21hbGx8ZW58MHx8MHx8fDA%3D&w=1000&q=80" alt="An example image">
+        </div>
+        <div class="footer">Footer</div>
+    </div>
+</body>
+</html>
