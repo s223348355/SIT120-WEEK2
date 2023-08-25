@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Concepts Display</title>
+</head>
+<body>
+    <h1>JavaScript Concepts</h1>
+
+    <h2>String Methods</h2>
+    <div id="stringMethods"></div>
+
+    <h2>Number Methods</h2>
+    <div id="numberMethods"></div>
+
+    <h2>Array Methods</h2>
+    <div id="arrayMethods"></div>
+
+    <h2>Date Methods</h2>
+    <div id="dateMethods"></div>
+
+    <h2>Function Methods</h2>
+    <div id="functionMethods"></div>
+
+    <script>
+        function greet() {
+            alert('Hello!');
+        }
+
+        greet();
+
+        function display(id, content) {
+            document.getElementById(id).innerHTML += content + '<br>';
+        }
+
+        var str = "Hello";
+        display('stringMethods', str.length);
+        display('stringMethods', str.toUpperCase());
+        display('stringMethods', str.toLowerCase());
+        display('stringMethods', str.indexOf('e'));
+        display('stringMethods', str.replace('Hello', 'World'));
+
+        var num = 123;
+        display('numberMethods', num.toString());
+        display('numberMethods', num.toFixed(2));
+        display('numberMethods', Number.isFinite(num));
+        display('numberMethods', Number.isInteger(num));
+        display('numberMethods', Number.parseFloat(num));
+
+        var arr = [1, 'a', 3, 'b']; 
+        display('arrayMethods', arr.length);
+        display('arrayMethods', arr.join());
+        display('arrayMethods', arr.push('c'));
+        display('arrayMethods', arr.pop());
+        display('arrayMethods', arr.reverse());
+
+        var date = new Date();
+        display('dateMethods', date.toDateString());
+        display('dateMethods', date.getDate());
+        display('dateMethods', date.getFullYear());
+        display('dateMethods', date.getMonth());
+        display('dateMethods', date.setFullYear(2023));
+
+        // e. Function Methods
+        function multiply(a, b) {
+            return a * b;
+        }
+        display('functionMethods', multiply(5, 3));
+    </script>
+</body>
+</html>
